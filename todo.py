@@ -15,7 +15,7 @@ class Todo:
     INV_ARGUMENTS = "arguments are invalid"
 
     def __init__(self):
-        self.__id = 1
+        self._id = 1
         self.id_to_todo = {}
 
     def add(self, todo):
@@ -29,8 +29,8 @@ class Todo:
         """
         if not todo:
             raise ValueError(self.INV_ARGUMENTS)
-        self.id_to_todo[self.__id] = str(todo)
-        self.__id = self.__id + 1
+        self.id_to_todo[self._id] = str(todo)
+        self._id = self._id + 1
 
     def remove(self, tid):
         """ method to remove single todo
@@ -80,7 +80,7 @@ class Todo:
         Returns:
             None
         """
-        pyobj = {"__id": self.__id, "id_to_todo": self.id_to_todo}
+        pyobj = {"_id": self._id, "id_to_todo": self.id_to_todo}
         storage.save(pyobj, filename)
 
     def load(self, filename):
@@ -91,5 +91,5 @@ class Todo:
             None
         """
         pyobj = storage.load(filename)
-        self.__id = pyobj["__id"]
+        self._id = pyobj["_id"]
         self.id_to_todo = pyobj["id_to_todo"]
