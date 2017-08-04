@@ -1,8 +1,5 @@
 # Short Guide on Running the Project
 
-* [Running the project](#markdown-header-running-the-project)
-* []
-
 ## Running the project
 
 ```sh
