@@ -85,3 +85,20 @@ class TodoTestCase(unittest.TestCase):
         2. If I load from saved file, I will receive list with same state
         """
         pass
+    
+    def test_save(self, mock_save):
+        """ to test save method
+        Scenarios:
+        1. If call with proper name, then it will return success and call the
+           function storage.save properly
+        """
+        pass
+
+    def test_load(self, mock_load):
+        """ to test load method
+        Scenarios:
+        1. If call with proper name, then it will return success and call the
+           function storage.load properly, the loaded list should be the same
+           as the test list
+        """
+        pass
